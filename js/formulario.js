@@ -1,3 +1,5 @@
+// Controle de validação e envio do formulário
+
 import {
     obterCadastros,
     salvarCadastro
