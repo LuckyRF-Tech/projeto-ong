@@ -1,3 +1,6 @@
+const logoWebp = new URL("../imagens/logo-ong.webp", import.meta.url).href;
+const logoPng = new URL("../imagens/logo-ong.png", import.meta.url).href;
+
 const projetos = [
     {
         titulo: "Voluntariado",
@@ -41,12 +44,12 @@ export function criarPaginaInicio() {
 
             <picture>
                 <source
-                    srcset="../imagens/logo-ong.webp"
+                    srcset="${logoWebp}"
                     type="image/webp"
                 >
 
                 <img
-                    src="../imagens/logo-ong.png"
+                    src="${logoPng}"
                     alt="Logotipo da ONG Esperança"
                 >
             </picture>
