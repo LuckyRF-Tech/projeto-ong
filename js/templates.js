@@ -21,6 +21,16 @@ const doacoesJpg = new URL(
     import.meta.url
 ).href;
 
+const comunidadeWebp = new URL(
+    "../imagens/comunidade.webp",
+    import.meta.url
+).href;
+
+const comunidadeJpg = new URL(
+    "../imagens/comunidade.jpg",
+    import.meta.url
+).href;
+
 
 const projetos = [
     {
@@ -45,9 +55,9 @@ const projetos = [
         titulo: "Apoio à Comunidade",
         descricao: "Ações destinadas ao atendimento de famílias da comunidade.",
         categoria: "Projeto ativo",
-        imagemWebp: null,
-        imagemFallback: null,
-        alt: ""
+        imagemWebp: comunidadeWebp,
+        imagemFallback: comunidadeJpg,
+        alt: "Projeto de apoio à comunidade da ONG Esperança"
     }
 ];
 
@@ -55,8 +65,9 @@ const projetos = [
 export function criarCardsProjetos() {
     return projetos.map(function(projeto) {
 
-        const imagemProjeto = projeto.imagemWebp
-            ? `
+        return `
+            <article class="projeto-card">
+
                 <picture>
                     <source
                         srcset="${projeto.imagemWebp}"
@@ -69,13 +80,6 @@ export function criarCardsProjetos() {
                         loading="lazy"
                     >
                 </picture>
-            `
-            : "";
-
-        return `
-            <article class="projeto-card">
-
-                ${imagemProjeto}
 
                 <span class="badge badge-ativo">
                     ${projeto.categoria}
