@@ -1,3 +1,5 @@
+// Controle de rotas da SPA
+
 import {
     criarPaginaInicio,
     criarPaginaProjetos,
