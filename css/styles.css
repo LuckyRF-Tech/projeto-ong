@@ -353,3 +353,18 @@ img {
     height: auto;
     display: block;
 }
+
+.projeto-card picture {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: var(--espaco-sm);
+}
+
+.projeto-card picture img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
